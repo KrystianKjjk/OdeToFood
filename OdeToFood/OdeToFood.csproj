@@ -10,10 +10,15 @@
       <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Pages\Restaurants\" />
+    <Folder Include="Pages\ViewComponents\" />
+    <Folder Include="Pages\Shared\Components\" />
+    <Folder Include="Pages\Shared\Components\RestaurantCount\" />
+    <Folder Include="Api\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OdeToFood.Data\OdeToFood.Data.csproj">
@@ -21,6 +26,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="Pages\Restaurants\List.cshtml" />
+    <Content Remove="Pages\Restaurants\ClientRestaurants.cshtml" />
   </ItemGroup>
 </Project>
